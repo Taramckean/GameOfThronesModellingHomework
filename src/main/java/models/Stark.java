@@ -1,11 +1,13 @@
 package models;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="starks")
 public class Stark extends Human{
-	private MysticalCreature mysticalCreature;
+	private List<MysticalCreature> mysticalCreatures;
 	private int grumpinessLevel;
 
 
@@ -16,7 +18,7 @@ public class Stark extends Human{
 	public Stark(String name, int age, House house, Side side, int grumpinessLevel) {
 		super(name, age, house, side);
 		this.grumpinessLevel = grumpinessLevel;
-		this.mysticalCreature = mysticalCreature;
+		this.mysticalCreatures = new ArrayList<MysticalCreature>();
 	}
 
 	public int getGrumpinessLevel() {
@@ -29,11 +31,11 @@ public class Stark extends Human{
 	}
 	@OneToMany
 			(mappedBy = "stark", fetch = FetchType.LAZY)
-	public MysticalCreature getMysticalCreature() {
-		return mysticalCreature;
+	public List<MysticalCreature> getMysticalCreatures() {
+		return mysticalCreatures;
 	}
 
-	public void setMysticalCreature(MysticalCreature mysticalCreature) {
-		this.mysticalCreature = mysticalCreature;
+	public void setMysticalCreatures(List<MysticalCreature> mysticalCreatures) {
+		this.mysticalCreatures = mysticalCreatures;
 	}
 }

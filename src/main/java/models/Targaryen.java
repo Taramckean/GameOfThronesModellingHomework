@@ -4,11 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "targaryens")
 public class Targaryen extends Human{
-	private MysticalCreature mysticalCreature;
+	private List<MysticalCreature> mysticalCreatures;
 	private boolean mad;
 
 	public Targaryen(){
@@ -18,7 +20,7 @@ public class Targaryen extends Human{
 	public Targaryen(String name, int age, House house, Side side,  boolean mad) {
 		super(name, age, house, side);
 		this.mad = mad;
-		this.mysticalCreature = mysticalCreature;
+		this.mysticalCreatures = new ArrayList<MysticalCreature>();
 	}
 
 	public boolean isMad() {
@@ -29,15 +31,14 @@ public class Targaryen extends Human{
 		this.mad = mad;
 	}
 
+
 	@OneToMany
 			(mappedBy = "targaryen", fetch = FetchType.LAZY)
-	public MysticalCreature getMysticalCreature() {
-		return mysticalCreature;
+	public List<MysticalCreature> getMysticalCreatures() {
+		return mysticalCreatures;
 	}
 
-	public void setMysticalCreature(MysticalCreature mysticalCreature) {
-		this.mysticalCreature = mysticalCreature;
+	public void setMysticalCreatures(List<MysticalCreature> mysticalCreatures) {
+		this.mysticalCreatures = mysticalCreatures;
 	}
-
-
 }

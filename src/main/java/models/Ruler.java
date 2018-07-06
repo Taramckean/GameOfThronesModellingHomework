@@ -25,18 +25,18 @@ public class Ruler extends Human {
 	public void setPowerLevel(int powerLevel) {
 		this.powerLevel = powerLevel;
 	}
-
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ruler_id", nullable = false)
 	public GoTWorld getGoTWorld() {
 		return goTWorld;
 	}
 
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "ruler_id", nullable = false)
+
 	public void setGoTWorld(GoTWorld goTWorld) {
 		this.goTWorld = goTWorld;
 	}
 
-	@OneToOne(mappedBy = "ironThrone", fetch = FetchType.LAZY)
+	@OneToOne(mappedBy = "ruler", fetch = FetchType.LAZY)
 	public IronThrone getIronThrone() {
 		return ironThrone;
 	}

@@ -12,8 +12,8 @@ public class MysticalCreature {
 	private Boolean alive;
 	private int strength;
 	private int attackPoints;
-	private Stark stark;
 	private Targaryen targaryen;
+	private Stark stark;
 	private GoTWorld goTWorld;
 
 
