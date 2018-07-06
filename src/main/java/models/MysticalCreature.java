@@ -13,7 +13,8 @@ public class MysticalCreature {
 	private Boolean livingOrDead;
 	private int strength;
 	private int attackPoints;
-	private MagicHuman magicHuman;
+	private Stark stark;
+	private Targaryen targaryen;
 
 
 	public MysticalCreature(){
@@ -26,7 +27,8 @@ public class MysticalCreature {
 		this.livingOrDead = livingOrDead;
 		this.strength = strength;
 		this.attackPoints = attackPoints;
-		this.magicHuman = magicHuman;
+		this.stark = stark;
+		this.targaryen = targaryen;
 	}
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
@@ -55,9 +57,15 @@ public class MysticalCreature {
 		return attackPoints;
 	}
 	@ManyToOne
-	@JoinColumn(name="magicHuman_id", nullable = false)
-	public MagicHuman getMagicHuman() {
-		return magicHuman;
+	@JoinColumn(name="stark_id", nullable = false)
+	public Stark getStark() {
+		return stark;
+	}
+
+	@ManyToOne
+	@JoinColumn(name="targaryen_id", nullable = false)
+	public Targaryen getTargaryen() {
+		return targaryen;
 	}
 
 	public void setId(int id) {
@@ -84,7 +92,11 @@ public class MysticalCreature {
 		this.attackPoints = attackPoints;
 	}
 
-	public void setMagicHuman(MagicHuman magicHuman) {
-		this.magicHuman = magicHuman;
+	public void setStark(Stark stark) {
+		this.stark = stark;
+	}
+
+	public void setTargaryen(Targaryen targaryen) {
+		this.targaryen = targaryen;
 	}
 }
