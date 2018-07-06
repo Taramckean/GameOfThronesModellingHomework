@@ -10,7 +10,7 @@ public abstract class Human {
 	private String name;
 	private int age;
 	private House house;
-
+	private Side side;
 	public Human(){
 
 	}
@@ -34,6 +34,11 @@ public abstract class Human {
 	public int getAge() {
 		return age;
 	}
+	@Enumerated(value = EnumType.STRING)
+	public Side getSide() {
+		return side;
+	}
+
 	@ManyToOne
 	@JoinColumn(name = "house_id", nullable = false)
 	public House getHouse() {
@@ -54,6 +59,10 @@ public abstract class Human {
 
 	public void setHouse(House house) {
 		this.house = house;
+	}
+
+	public void setSide(Side side) {
+		this.side = side;
 	}
 }
 

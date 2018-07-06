@@ -10,7 +10,7 @@ public class MysticalCreature {
 	private int id;
 	private String type;
 	private SpecialPower specialPower;
-	private Boolean livingOrDead;
+	private Boolean alive;
 	private int strength;
 	private int attackPoints;
 	private Stark stark;
@@ -21,10 +21,10 @@ public class MysticalCreature {
 
 	}
 
-	public MysticalCreature(String type, SpecialPower specialPower, Boolean livingOrDead, int strength, int attackPoints) {
+	public MysticalCreature(String type, SpecialPower specialPower, Boolean alive, int strength, int attackPoints) {
 		this.type = type;
 		this.specialPower = specialPower;
-		this.livingOrDead = livingOrDead;
+		this.alive = alive;
 		this.strength = strength;
 		this.attackPoints = attackPoints;
 		this.stark = stark;
@@ -44,9 +44,9 @@ public class MysticalCreature {
 	public Enum getSpecialPower() {
 		return specialPower;
 	}
-	@Column(name ="livingOrDead")
+	@Column(name ="alive")
 	public Boolean getLivingOrDead() {
-		return livingOrDead;
+		return alive;
 	}
 	@Column(name ="strength")
 	public int getStrength() {
@@ -80,8 +80,8 @@ public class MysticalCreature {
 		this.specialPower = specialPower;
 	}
 
-	public void setLivingOrDead(Boolean livingOrDead) {
-		this.livingOrDead = livingOrDead;
+	public void setLivingOrDead(Boolean alive) {
+		this.alive = alive;
 	}
 
 	public void setStrength(int strength) {

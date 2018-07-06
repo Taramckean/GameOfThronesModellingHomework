@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba459cca-ddee-46bc-bfda-3bfc2c41416b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/MagicHuman.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Human.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/MysticalCreature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/MysticalCreature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Stark.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Stark.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Targaryen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Targaryen.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -21,8 +19,8 @@
       <file leaf-file-name="Human.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/models/Human.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+            <state relative-caret-position="180">
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -30,8 +28,20 @@
       <file leaf-file-name="MysticalCreature.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/models/MysticalCreature.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1154">
-              <caret line="94" column="39" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
+            <state relative-caret-position="-556">
+              <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoTWorld.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/models/GoTWorld.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,7 +148,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Runner.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/SpecialPower.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/MagicHuman.java" />
-        <option value="$PROJECT_DIR$/src/main/java/models/Human.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Ruler.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/IronThrone.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Lannister.java" />
@@ -146,6 +155,7 @@
         <option value="$PROJECT_DIR$/src/main/java/models/Stark.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/Targaryen.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/MysticalCreature.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Human.java" />
       </list>
     </option>
   </component>
@@ -430,16 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/GoTWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/House.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -484,16 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/models/MysticalCreature.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1154">
-          <caret line="94" column="39" selection-start-line="94" selection-start-column="39" selection-end-line="94" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Targaryen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -521,10 +511,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/GoTWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/MysticalCreature.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-556">
+          <caret line="23" column="81" selection-start-line="23" selection-start-column="81" selection-end-line="23" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/models/Human.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        <state relative-caret-position="180">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
