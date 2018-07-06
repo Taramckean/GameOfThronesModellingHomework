@@ -5,6 +5,7 @@ import javax.xml.ws.BindingType;
 
 @Entity
 @Table(name ="mysticalCreatures")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class MysticalCreature {
 	private int id;
 	private String type;
@@ -67,7 +68,7 @@ public class MysticalCreature {
 		this.type = type;
 	}
 
-	public void setSpecialPower(Enum specialPower) {
+	public void setSpecialPower(SpecialPower specialPower) {
 		this.specialPower = specialPower;
 	}
 

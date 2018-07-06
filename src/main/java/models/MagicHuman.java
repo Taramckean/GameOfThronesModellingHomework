@@ -14,7 +14,7 @@ public class MagicHuman extends Human{
 
 	}
 
-	public MagicHuman(String name, int age, House house, MysticalCreature mysticalCreature) {
+	public MagicHuman(String name, int age, House house) {
 		super(name, age, house);
 		this.mysticalCreature = mysticalCreature;
 	}
