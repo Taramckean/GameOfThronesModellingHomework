@@ -8,7 +8,6 @@ import javax.xml.ws.BindingType;
 @Inheritance(strategy = InheritanceType.JOINED)
 public class MysticalCreature {
 	private int id;
-	private String type;
 	private SpecialPower specialPower;
 	private Boolean alive;
 	private int strength;
@@ -22,8 +21,7 @@ public class MysticalCreature {
 
 	}
 
-	public MysticalCreature(String type, SpecialPower specialPower, Boolean alive, int strength, int attackPoints) {
-		this.type = type;
+	public MysticalCreature(SpecialPower specialPower, Boolean alive, int strength, int attackPoints) {
 		this.specialPower = specialPower;
 		this.alive = alive;
 		this.strength = strength;
@@ -37,10 +35,7 @@ public class MysticalCreature {
 	public int getId() {
 		return id;
 	}
-	@Column(name ="type")
-	public String getType() {
-		return type;
-	}
+
 	@Enumerated(value = EnumType.STRING)
 	public Enum getSpecialPower() {
 		return specialPower;
@@ -77,10 +72,6 @@ public class MysticalCreature {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public void setSpecialPower(SpecialPower specialPower) {
