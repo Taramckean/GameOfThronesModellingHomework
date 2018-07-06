@@ -8,7 +8,7 @@ import javax.xml.ws.BindingType;
 public class MysticalCreature {
 	private int id;
 	private String type;
-	private Enum specialPower;
+	private SpecialPower specialPower;
 	private Boolean livingOrDead;
 	private int strength;
 	private int attackPoints;
@@ -19,7 +19,7 @@ public class MysticalCreature {
 
 	}
 
-	public MysticalCreature(String type, Enum specialPower, Boolean livingOrDead, int strength, int attackPoints) {
+	public MysticalCreature(String type, SpecialPower specialPower, Boolean livingOrDead, int strength, int attackPoints) {
 		this.type = type;
 		this.specialPower = specialPower;
 		this.livingOrDead = livingOrDead;
@@ -37,7 +37,7 @@ public class MysticalCreature {
 	public String getType() {
 		return type;
 	}
-	@Column(name ="specialPower")
+	@Enumerated(value = EnumType.STRING)
 	public Enum getSpecialPower() {
 		return specialPower;
 	}
