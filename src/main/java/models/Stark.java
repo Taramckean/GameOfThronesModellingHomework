@@ -13,8 +13,8 @@ public class Stark extends Human{
 
 	}
 
-	public Stark(String name, int age, House house, int grumpinessLevel) {
-		super(name, age, house);
+	public Stark(String name, int age, House house, Side side, int grumpinessLevel) {
+		super(name, age, house, side);
 		this.grumpinessLevel = grumpinessLevel;
 		this.mysticalCreature = mysticalCreature;
 	}

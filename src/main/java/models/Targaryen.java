@@ -15,8 +15,8 @@ public class Targaryen extends Human{
 
 	}
 
-	public Targaryen(String name, int age, House house, boolean mad) {
-		super(name, age, house);
+	public Targaryen(String name, int age, House house, Side side,  boolean mad) {
+		super(name, age, house, side);
 		this.mad = mad;
 		this.mysticalCreature = mysticalCreature;
 	}

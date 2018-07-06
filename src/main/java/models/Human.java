@@ -11,14 +11,17 @@ public abstract class Human {
 	private int age;
 	private House house;
 	private Side side;
+	private GoTWorld goTWorld;
+
 	public Human(){
 
 	}
 
-	public Human(String name, int age, House house) {
+	public Human(String name, int age, House house, Side side) {
 		this.name = name;
 		this.age = age;
 		this.house = house;
+		this.side = side;
 	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,6 +47,11 @@ public abstract class Human {
 	public House getHouse() {
 		return this.house;
 	}
+	@ManyToOne
+	@JoinColumn(name = "got_id", nullable = false)
+	public GoTWorld getGoTWorld() {
+		return goTWorld;
+	}
 
 	public void setId(int id) {
 		this.id = id;
@@ -63,6 +71,10 @@ public abstract class Human {
 
 	public void setSide(Side side) {
 		this.side = side;
+	}
+
+	public void setGoTWorld(GoTWorld goTWorld) {
+		this.goTWorld = goTWorld;
 	}
 }
 

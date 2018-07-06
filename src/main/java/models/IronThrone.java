@@ -3,7 +3,7 @@ package models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ironThrones")
+@Table(name = "ironThrone")
 public class IronThrone {
 	private int id;
 	private int noOfSwords;

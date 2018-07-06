@@ -15,6 +15,7 @@ public class MysticalCreature {
 	private int attackPoints;
 	private Stark stark;
 	private Targaryen targaryen;
+	private GoTWorld goTWorld;
 
 
 	public MysticalCreature(){
@@ -45,7 +46,7 @@ public class MysticalCreature {
 		return specialPower;
 	}
 	@Column(name ="alive")
-	public Boolean getLivingOrDead() {
+	public Boolean getAlive() {
 		return alive;
 	}
 	@Column(name ="strength")
@@ -67,6 +68,12 @@ public class MysticalCreature {
 	public Targaryen getTargaryen() {
 		return targaryen;
 	}
+	@ManyToOne
+	@JoinColumn(name="got_id", nullable = false)
+	public GoTWorld getGoTWorld() {
+		return goTWorld;
+	}
+
 
 	public void setId(int id) {
 		this.id = id;
@@ -80,7 +87,7 @@ public class MysticalCreature {
 		this.specialPower = specialPower;
 	}
 
-	public void setLivingOrDead(Boolean alive) {
+	public void setAlive(Boolean alive) {
 		this.alive = alive;
 	}
 
@@ -98,5 +105,9 @@ public class MysticalCreature {
 
 	public void setTargaryen(Targaryen targaryen) {
 		this.targaryen = targaryen;
+	}
+
+	public void setGoTWorld(GoTWorld goTWorld) {
+		this.goTWorld = goTWorld;
 	}
 }

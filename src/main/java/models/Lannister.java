@@ -13,8 +13,8 @@ public class Lannister extends Human {
 
 	}
 
-	public Lannister(String name, int age, House house, int arroganceLevel, int money) {
-		super(name, age, house);
+	public Lannister(String name, int age, House house, Side side, int arroganceLevel, int money) {
+		super(name, age, house, side);
 		this.arroganceLevel = arroganceLevel;
 		this.money = money;
 	}

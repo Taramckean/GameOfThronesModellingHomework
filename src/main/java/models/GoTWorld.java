@@ -33,15 +33,15 @@ public class GoTWorld {
 	public String getName() {
 		return name;
 	}
-
+	@OneToOne(mappedBy = "goTWorld", fetch = FetchType.LAZY)
 	public Ruler getRuler() {
 		return ruler;
 	}
-
+	@OneToMany(mappedBy="goTWorld", fetch = FetchType.LAZY)
 	public List<Human> getPeople() {
 		return people;
 	}
-
+	@OneToMany(mappedBy="goTWorld", fetch = FetchType.LAZY)
 	public List<MysticalCreature> getMysticalCreatures() {
 		return mysticalCreatures;
 	}
