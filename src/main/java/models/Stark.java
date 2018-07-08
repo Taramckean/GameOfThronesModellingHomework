@@ -7,7 +7,7 @@ import java.util.List;
 @Entity
 @Table(name="starks")
 public class Stark extends Human{
-	private List<MysticalCreature> mysticalCreatures;
+	private Direwolf direwolf;
 	private int grumpinessLevel;
 
 
@@ -15,10 +15,10 @@ public class Stark extends Human{
 
 	}
 
-	public Stark(String name, int age, House house, Side side, int grumpinessLevel) {
+	public Stark(String name, int age, House house, Side side, int grumpinessLevel, Direwolf direwolf) {
 		super(name, age, house, side);
 		this.grumpinessLevel = grumpinessLevel;
-		this.mysticalCreatures = new ArrayList<MysticalCreature>();
+		this.direwolf = direwolf;
 	}
 
 	public int getGrumpinessLevel() {
@@ -29,13 +29,12 @@ public class Stark extends Human{
 	public void setGrumpinessLevel(int grumpinessLevel) {
 		this.grumpinessLevel = grumpinessLevel;
 	}
-	@OneToMany
-			(mappedBy = "stark", fetch = FetchType.LAZY)
-	public List<MysticalCreature> getMysticalCreatures() {
-		return mysticalCreatures;
+	@OneToOne(mappedBy = "stark", fetch = FetchType.LAZY)
+	public Direwolf getDirewolf() {
+		return direwolf;
 	}
 
-	public void setMysticalCreatures(List<MysticalCreature> mysticalCreatures) {
-		this.mysticalCreatures = mysticalCreatures;
+	public void setDirewolf(Direwolf direwolf) {
+		this.direwolf = direwolf;
 	}
 }

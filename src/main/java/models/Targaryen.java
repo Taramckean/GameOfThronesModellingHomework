@@ -1,28 +1,25 @@
 package models;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import java.util.ArrayList;
+import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "targaryens")
-public class Targaryen extends Human{
-	private List<MysticalCreature> mysticalCreatures;
+public class Targaryen extends Human {
+	private Set<Dragon> dragons;
 	private boolean mad;
 
-	public Targaryen(){
+	public Targaryen() {
 
 	}
 
-	public Targaryen(String name, int age, House house, Side side,  boolean mad) {
+	public Targaryen(String name, int age, House house, Side side, boolean mad) {
 		super(name, age, house, side);
 		this.mad = mad;
-		this.mysticalCreatures = new ArrayList<MysticalCreature>();
+//		this.dragons = new ArrayList<Dragon>();
 	}
-
+	@Column(name="isMad")
 	public boolean isMad() {
 		return mad;
 	}
@@ -32,13 +29,13 @@ public class Targaryen extends Human{
 	}
 
 
-	@OneToMany
-			(mappedBy = "targaryen", fetch = FetchType.LAZY)
-	public List<MysticalCreature> getMysticalCreatures() {
-		return mysticalCreatures;
+	@OneToMany(mappedBy = "targaryen", fetch = FetchType.LAZY)
+	public Set<Dragon> getDragons() {
+		return dragons;
 	}
 
-	public void setMysticalCreatures(List<MysticalCreature> mysticalCreatures) {
-		this.mysticalCreatures = mysticalCreatures;
+	public void setDragons(Set<Dragon> dragons) {
+		this.dragons = dragons;
 	}
 }
+

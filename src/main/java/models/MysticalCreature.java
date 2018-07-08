@@ -12,7 +12,6 @@ public class MysticalCreature {
 	private Boolean alive;
 	private int strength;
 	private int attackPoints;
-	private Targaryen targaryen;
 	private Stark stark;
 	private GoTWorld goTWorld;
 
@@ -52,11 +51,6 @@ public class MysticalCreature {
 		return attackPoints;
 	}
 
-//	@ManyToOne
-//	@JoinColumn(name="targaryen_id", nullable = false)
-//	public Targaryen getTargaryen() {
-//		return targaryen;
-//	}
 	@ManyToOne
 	@JoinColumn(name="got_id", nullable = false)
 	public GoTWorld getGoTWorld() {

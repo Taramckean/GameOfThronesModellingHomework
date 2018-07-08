@@ -20,8 +20,8 @@ public class GoTWorld {
 	public GoTWorld(String name, Ruler ruler) {
 		this.name = name;
 		this.ruler = ruler;
-		this.people = new ArrayList<Human>();
-		this.mysticalCreatures = new ArrayList<MysticalCreature>(mysticalCreatures);
+//		this.people = new ArrayList<Human>();
+//		this.mysticalCreatures = new ArrayList<MysticalCreature>();
 	}
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)

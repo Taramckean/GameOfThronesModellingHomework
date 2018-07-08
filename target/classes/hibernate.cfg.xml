@@ -12,10 +12,12 @@
         <property name="connection.pool_size">1</property>
         <property name="show_sql">true</property>
         <mapping class = "models.Direwolf"/>
+        <mapping class = "models.Dragon"/>
         <mapping class = "models.GoTWorld"/>
         <mapping class = "models.Human"/>
         <mapping class = "models.House"/>
         <mapping class = "models.IronThrone"/>
+        <mapping class = "models.Lannister"/>
         <mapping class = "models.MysticalCreature"/>
         <mapping class = "models.Ruler"/>
         <mapping class = "models.Stark"/>

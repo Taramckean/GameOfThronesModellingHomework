@@ -1,9 +1,6 @@
 package models;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "direwolves")
@@ -21,19 +18,16 @@ public class Direwolf extends MysticalCreature{
 
 
 	}
-	@ManyToOne
-	@JoinColumn(name="stark_id", nullable = false)
+	@OneToOne
+	@JoinColumn(name = "stark_id", nullable = false)
 	public Stark getStark() {
 		return stark;
 	}
 
-
-
-	public String howl(){
-		return "AWOOOOOOOOO!";
-	}
-
 	public void setStark(Stark stark) {
 		this.stark = stark;
+	}
+	public String howl(){
+		return "AWOOOOOOOOO!";
 	}
 }
