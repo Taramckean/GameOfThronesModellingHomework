@@ -20,9 +20,11 @@
         <mapping class = "models.IronThrone"/>
         <mapping class = "models.Lannister"/>
         <mapping class = "models.MysticalCreature"/>
+        <mapping class = "models.NightKing"/>
         <mapping class = "models.Ruler"/>
         <mapping class = "models.Stark"/>
         <mapping class = "models.Targaryen"/>
         <mapping class = "models.Whitewalker"/>
+        <mapping class = "models.Wight"/>
     </session-factory>
 </hibernate-configuration>

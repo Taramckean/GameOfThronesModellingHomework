@@ -25,5 +25,6 @@
         <mapping class = "models.Stark"/>
         <mapping class = "models.Targaryen"/>
         <mapping class = "models.Whitewalker"/>
+        <mapping class = "models.Wight"/>
     </session-factory>
 </hibernate-configuration>

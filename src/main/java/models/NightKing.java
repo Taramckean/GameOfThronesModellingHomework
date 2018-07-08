@@ -19,7 +19,7 @@ private Set<Wight> wightArmy;
 	public NightKing(SpecialPower specialPower, Boolean alive, int strength, int attackPoints, boolean areTheyBlue) {
 		super(specialPower, alive, strength, attackPoints, areTheyBlue);
 	}
-	@OneToMany(mappedBy = "nightking", fetch = FetchType.LAZY)
+	@OneToMany(mappedBy = "nightKing", fetch = FetchType.LAZY)
 	public Set<Wight> getWightArmy() {
 		return wightArmy;
 	}

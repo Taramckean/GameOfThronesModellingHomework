@@ -1,5 +1,5 @@
 package models;
-mport javax.persistence.Entity;
+import javax.persistence.Entity;
 
 import javax.persistence.*;
 
@@ -23,12 +23,16 @@ public class Wight extends MysticalCreature{
 		return grossoutDeadFactor;
 	}
 	@ManyToOne
-	@JoinColumn(name="nightking_id", nullable = false)
+	@JoinColumn(name="nightKing_id", nullable = false)
 	public NightKing getNightKing() {
 		return nightKing;
 	}
 
 	public void setGrossoutDeadFactor(int grossoutDeadFactor) {
 		this.grossoutDeadFactor = grossoutDeadFactor;
+	}
+
+	public void setNightKing(NightKing nightKing) {
+		this.nightKing = nightKing;
 	}
 }
