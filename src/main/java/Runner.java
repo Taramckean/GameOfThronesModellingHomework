@@ -1,9 +1,11 @@
 import db.DBHelper;
+import db.DBMysticalCreature;
 import db.DBTargaryen;
 import models.*;
 import sun.security.pkcs11.Secmod;
 
 import java.util.List;
+import java.util.Set;
 
 public class Runner {
 	public static void main(String[] args) {
@@ -64,6 +66,7 @@ public class Runner {
 
 		List<Dragon> dragonList = DBTargaryen.getDragonsForTargaryen(Daenerys);
 
+		List<MysticalCreature> whichIsScariest = DBMysticalCreature.orderByScariness();
 
 
 	}

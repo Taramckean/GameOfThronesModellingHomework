@@ -34,7 +34,7 @@ public class MysticalCreature {
 	}
 
 	@Enumerated(value = EnumType.STRING)
-	public Enum getSpecialPower() {
+	public SpecialPower getSpecialPower() {
 		return specialPower;
 	}
 	@Column(name ="alive")
