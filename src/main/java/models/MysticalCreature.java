@@ -12,7 +12,6 @@ public class MysticalCreature {
 	private Boolean alive;
 	private int strength;
 	private int attackPoints;
-	private Stark stark;
 	private GoTWorld goTWorld;
 
 
@@ -51,11 +50,6 @@ public class MysticalCreature {
 		return attackPoints;
 	}
 
-	@ManyToOne
-	@JoinColumn(name="got_id", nullable = false)
-	public GoTWorld getGoTWorld() {
-		return goTWorld;
-	}
 
 
 	public void setId(int id) {
@@ -79,7 +73,5 @@ public class MysticalCreature {
 	}
 
 
-	public void setGoTWorld(GoTWorld goTWorld) {
-		this.goTWorld = goTWorld;
-	}
+
 }

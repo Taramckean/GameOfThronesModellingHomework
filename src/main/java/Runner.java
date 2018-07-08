@@ -16,11 +16,23 @@ public class Runner {
 		DBHelper.saveOrUpdate(currentRuler);
 
 
+		Targaryen Daenerys = new Targaryen("Daenerys Targaryen", 22, houseTargaryen, Side.UNKNOWN, true);
+		DBHelper.saveOrUpdate(Daenerys);
+
+		Dragon Drogon = new Dragon(SpecialPower.FIREBREATHING, true, 500, 400, Daenerys);
+		DBHelper.saveOrUpdate(Drogon);
+
+		Dragon Rhaegal = new Dragon(SpecialPower.FIREBREATHING, true, 500, 400, Daenerys);
+		DBHelper.saveOrUpdate(Rhaegal);
+
 		Direwolf ghost = new Direwolf( SpecialPower.MAULING, true, 150, 250);
 		DBHelper.saveOrUpdate(ghost);
 
 		Stark jonSnow = new Stark("Jon Snow", 22, houseStark, Side.GOOD, 50, ghost);
 		DBHelper.saveOrUpdate(jonSnow);
+
+		IronThrone ironThrone = new IronThrone(200, 500, currentRuler);
+		DBHelper.saveOrUpdate(ironThrone);
 
 		GoTWorld goTWorld = new GoTWorld("The world", currentRuler);
 		DBHelper.saveOrUpdate(goTWorld);

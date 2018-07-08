@@ -17,7 +17,7 @@ public class Dragon extends MysticalCreature{
 		this.targaryen = targaryen;
 	}
 	@ManyToOne
-	@JoinColumn(name="targaryen_id", nullable = false)
+	@JoinColumn(name="targaryen_id", nullable = true)
 	public Targaryen getTargaryen() {
 		return targaryen;
 	}

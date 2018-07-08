@@ -11,7 +11,7 @@ public abstract class Human {
 	private int age;
 	private House house;
 	private Side side;
-	private GoTWorld goTWorld;
+
 
 	public Human(){
 
@@ -47,11 +47,7 @@ public abstract class Human {
 	public House getHouse() {
 		return this.house;
 	}
-	@ManyToOne
-	@JoinColumn(name = "got_id", nullable = false)
-	public GoTWorld getGoTWorld() {
-		return goTWorld;
-	}
+
 
 	public void setId(int id) {
 		this.id = id;
@@ -73,8 +69,5 @@ public abstract class Human {
 		this.side = side;
 	}
 
-	public void setGoTWorld(GoTWorld goTWorld) {
-		this.goTWorld = goTWorld;
-	}
 }
 

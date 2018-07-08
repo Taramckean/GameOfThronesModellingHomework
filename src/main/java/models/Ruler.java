@@ -16,9 +16,9 @@ public class Ruler extends Human {
 	public Ruler(String name, int age, House house, Side side, int powerLevel) {
 		super(name, age, house, side);
 		this.powerLevel = powerLevel;
-//		this.goTWorld = goTWorld;
-	}
 
+	}
+	@Column(name="powerLevel")
 	public int getPowerLevel() {
 		return powerLevel;
 	}
@@ -27,7 +27,7 @@ public class Ruler extends Human {
 		this.powerLevel = powerLevel;
 	}
 	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "ruler_id", nullable = true)
+	@JoinColumn(name = "ruler_id", nullable =true)
 	public GoTWorld getGoTWorld() {
 		return goTWorld;
 	}
@@ -38,7 +38,7 @@ public class Ruler extends Human {
 	}
 
 	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "throne_id", nullable = true)
+	@JoinColumn(name = "ironThrone_id", nullable = true)
 	public IronThrone getIronThrone() {
 		return ironThrone;
 	}

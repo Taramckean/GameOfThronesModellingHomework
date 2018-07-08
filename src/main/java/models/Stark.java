@@ -20,7 +20,7 @@ public class Stark extends Human{
 		this.grumpinessLevel = grumpinessLevel;
 		this.direwolf = direwolf;
 	}
-
+	@Column(name="grumpinesslevel")
 	public int getGrumpinessLevel() {
 		return grumpinessLevel;
 	}

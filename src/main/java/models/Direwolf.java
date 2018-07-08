@@ -14,11 +14,11 @@ public class Direwolf extends MysticalCreature{
 
 	public Direwolf(SpecialPower specialPower, Boolean alive, int strength, int attackPoints) {
 		super(specialPower, alive, strength, attackPoints);
-		this.stark = stark;
+
 
 
 	}
-	@OneToOne
+	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "stark_id", nullable = false)
 	public Stark getStark() {
 		return stark;
