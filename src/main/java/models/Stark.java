@@ -29,7 +29,8 @@ public class Stark extends Human{
 	public void setGrumpinessLevel(int grumpinessLevel) {
 		this.grumpinessLevel = grumpinessLevel;
 	}
-	@OneToOne(mappedBy = "stark", fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "direwolf_id", nullable = false)
 	public Direwolf getDirewolf() {
 		return direwolf;
 	}

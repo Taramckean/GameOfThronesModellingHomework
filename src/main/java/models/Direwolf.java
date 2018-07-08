@@ -18,8 +18,7 @@ public class Direwolf extends MysticalCreature{
 
 
 	}
-	@OneToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "stark_id", nullable = false)
+	@OneToOne(mappedBy = "direwolf",fetch = FetchType.LAZY)
 	public Stark getStark() {
 		return stark;
 	}
