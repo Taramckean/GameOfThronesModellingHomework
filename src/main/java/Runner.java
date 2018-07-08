@@ -25,7 +25,11 @@ public class Runner {
 		Dragon Rhaegal = new Dragon(SpecialPower.FIREBREATHING, true, 500, 400, Daenerys);
 		DBHelper.saveOrUpdate(Rhaegal);
 
-		Dragon Viserion = new Dragon(SpecialPower.ICEBREATHING, false, 500, 400)
+		Whitewalker oldestWW = new Whitewalker(SpecialPower.ICEPOWERS, false, 380, 300, true);
+		DBHelper.saveOrUpdate(oldestWW);
+
+		IceDragon Viserion = new IceDragon(SpecialPower.ICEBREATHING, false, 500, 400, oldestWW);
+		DBHelper.saveOrUpdate(Viserion);
 
 		Direwolf ghost = new Direwolf( SpecialPower.MAULING, true, 150, 250);
 		DBHelper.saveOrUpdate(ghost);

@@ -16,11 +16,14 @@
         <mapping class = "models.GoTWorld"/>
         <mapping class = "models.Human"/>
         <mapping class = "models.House"/>
+        <mapping class = "models.IceDragon"/>
         <mapping class = "models.IronThrone"/>
         <mapping class = "models.Lannister"/>
         <mapping class = "models.MysticalCreature"/>
+        <mapping class = "models.NightKing"/>
         <mapping class = "models.Ruler"/>
         <mapping class = "models.Stark"/>
         <mapping class = "models.Targaryen"/>
+        <mapping class = "models.Whitewalker"/>
     </session-factory>
 </hibernate-configuration>
