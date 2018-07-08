@@ -2,6 +2,7 @@ package models;
 
 public enum SpecialPower {
 	FIREBREATHING(400),
+	ICEBREATHING(400),
 	FISTFIGHTING(50),
 	MAULING(150),
 	ICEPOWERS(200),
