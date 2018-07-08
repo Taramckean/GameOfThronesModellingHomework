@@ -32,7 +32,8 @@ public class GoTWorld {
 	public String getName() {
 		return name;
 	}
-	@OneToOne(mappedBy = "goTWorld", fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name ="gotworld_id", nullable = false)
 	public Ruler getRuler() {
 		return ruler;
 	}

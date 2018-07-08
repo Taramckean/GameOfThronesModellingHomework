@@ -33,7 +33,8 @@ public class IronThrone {
 	public int getPainfulnessFactor() {
 		return painfulnessFactor;
 	}
-	@OneToOne(mappedBy = "ironThrone",fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "ruler_id", nullable = false)
 	public Ruler getRuler() {
 		return ruler;
 	}
